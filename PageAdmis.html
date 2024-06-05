@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Administrateur</title>
+    <link rel="stylesheet" href="FichiersCSS/PageAdmis.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/IMG-20240603-WA0001.jpg" alt="Logo" class="logo">
+            <ul>
+                <li><a href="Acceuil-essai.html">ACCUEIL</a></li>
+                <li><a href="Produit-essaie.html">NOS PRODUITS</a></li>
+                <li><a href="Contact-essaie.html">CONTACTS</a></li>
+                <li><a href="administration.html">ESPACE ADMINISTRATEUR</a></li> <!-- Lien vers la page d'administration -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Espace Administrateur</h1>
+        <!-- Formulaire pour ajouter une catégorie -->
+        <section>
+            <h2>Ajouter une Catégorie</h2>
+            <form id="categoryForm">
+                <label for="categoryName">Nom de la Catégorie :</label><br>
+                <input type="text" id="categoryName" name="categoryName"><br>
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+
+        <!-- Section pour gérer les catégories et les produits -->
+        <section id="categoriesSection" style="display: none;">
+            <!-- Liste des catégories existantes -->
+            <h2>Catégories Existants</h2>
+            <ul id="categoriesList"></ul>
+
+            <!-- Formulaire pour ajouter un produit -->
+            <h2>Ajouter un Produit</h2>
+            <form id="productForm">
+                <label for="productName">Nom du Produit :</label><br>
+                <input type="text" id="productName" name="productName"><br>
+                <label for="productPrice">Prix :</label><br>
+                <input type="number" id="productPrice" name="productPrice"><br>
+                <label for="productImage">Image :</label><br>
+                <input type="file" id="productImage" name="productImage"><br>
+                <button type="submit">Ajouter</button>
+            </form>
+
+            <!-- Affichage des catégories et des produits -->
+            <div id="categoryProducts"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class

@@ -1,0 +1,147 @@
+/* Styles for the header and navigation */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+header .logo {
+    height: 50px; /* Adjust the size as needed */
+}
+
+.logo {
+    
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Styles for the main content */
+main {
+    text-align: center;
+    padding: 0;
+    background-color: grey;
+    position: relative;
+    height: 100vh; /* Make the main element cover the full viewport height */
+}
+
+main .swiper-container {
+    width: 100%;
+    height: 100%; /* Make the swiper container cover the full viewport height */
+    position: relative;
+    margin: 0;
+}
+
+main .swiper-wrapper {
+    display: flex;
+}
+
+main .swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.swiper-slide {
+    opacity: 0; /* Cache toutes les diapositives par défaut */
+    transition: opacity 0.3s ease; /* Ajoute une transition en douceur */
+}
+
+.swiper-slide-active {
+    opacity: 1; /* Affiche uniquement la diapositive active */
+}
+
+
+main .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+main .swiper-slide-active {
+    display: block; /* Display only the active slide */
+}
+
+main .slide-text {
+    position: absolute;
+    bottom: 100px; /* Adjust position to be higher */
+    left: 50%;
+    transform: translate(-50%,-400%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.8em;
+    text-align: center;
+    max-width: 80%;
+    z-index: 10; /* Ensure the text is above other elements */
+}
+
+main .button {
+    position: absolute;
+    bottom: 50px; /* Adjust position to be higher */
+    left: 50%;
+    transform: translate(-50%,-400%);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000; /* Black background */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 5px;
+    z-index: 10; /* Ensure the button is above other elements */
+}
+
+main .button:hover {
+    background-color: #333; /* Darker background color on hover */
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 10%; /* Position verticale du texte */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    max-width: 80%;
+    z-index: 10; /* Assurez-vous que le texte est au-dessus des autres éléments */
+}
+
+.button {
+    position: absolute;
+    bottom: 50%; /* Position verticale du bouton */
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000; /* Fond noir */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    z-index: 10; /* Assurez-vous que le bouton est au-dessus des autres éléments */
+}
