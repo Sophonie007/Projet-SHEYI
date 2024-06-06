@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espace Administrateur</title>
+    <title>Administration</title>
     <link rel="stylesheet" href="FichiersCSS/PageAdmis.css">
 </head>
 <body>
@@ -14,44 +14,47 @@
                 <li><a href="Acceuil-essai.html">ACCUEIL</a></li>
                 <li><a href="Produit-essaie.html">NOS PRODUITS</a></li>
                 <li><a href="Contact-essaie.html">CONTACTS</a></li>
-                <li><a href="administration.html">ESPACE ADMINISTRATEUR</a></li> <!-- Lien vers la page d'administration -->
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Espace Administrateur</h1>
-        <!-- Formulaire pour ajouter une catégorie -->
+        <h1>Administration des Produits</h1>
         <section>
-            <h2>Ajouter une Catégorie</h2>
+            <h2>Ajouter une catégorie</h2>
             <form id="categoryForm">
-                <label for="categoryName">Nom de la Catégorie :</label><br>
-                <input type="text" id="categoryName" name="categoryName"><br>
-                <button type="submit">Ajouter</button>
+                <input type="text" id="categoryName" placeholder="Nom de la catégorie" required>
+                <button type="submit">Ajouter Catégorie</button>
             </form>
         </section>
-
-        <!-- Section pour gérer les catégories et les produits -->
-        <section id="categoriesSection" style="display: none;">
-            <!-- Liste des catégories existantes -->
-            <h2>Catégories Existants</h2>
-            <ul id="categoriesList"></ul>
-
-            <!-- Formulaire pour ajouter un produit -->
-            <h2>Ajouter un Produit</h2>
+        <section>
+            <h2>Ajouter un produit</h2>
             <form id="productForm">
-                <label for="productName">Nom du Produit :</label><br>
-                <input type="text" id="productName" name="productName"><br>
-                <label for="productPrice">Prix :</label><br>
-                <input type="number" id="productPrice" name="productPrice"><br>
-                <label for="productImage">Image :</label><br>
-                <input type="file" id="productImage" name="productImage"><br>
-                <button type="submit">Ajouter</button>
+                <select id="categoriesList"></select>
+                <input type="text" id="productName" placeholder="Nom du produit" required>
+                <input type="text" id="productPrice" placeholder="Prix du produit" required>
+                <input type="file" id="productImage" accept="image/*" required>
+                <button type="submit">Ajouter Produit</button>
             </form>
-
-            <!-- Affichage des catégories et des produits -->
-            <div id="categoryProducts"></div>
+        </section>
+        <section id="categoryProducts">
+            <!-- Les catégories et produits seront affichés ici -->
         </section>
     </main>
-
     <footer>
-        <div class
+        <div class="footer-container">
+            <div class="social-media">
+                <h3>Suivez-nous</h3>
+                <a href="https://www.facebook.com"><img src="images/facebook - Copie.png" alt="Facebook"></a>
+                <a href="https://www.twitter.com"><img src="images/twitter.jpg" alt="Twitter"></a>
+                <a href="https://www.instagram.com"><img src="images/instagram - Copie.jpg" alt="Instagram"></a>
+            </div>
+            <div class="contact-info">
+                <h3>Contactez-nous</h3>
+                <p>Email : <a href="mailto:contact@votresite.com">contact@votresite.com</a></p>
+                <p>Téléphone : <a href="tel:+1234567890">+123 456 7890</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="JS/PageAdmis.js"></script>
+</body>
+</html>
